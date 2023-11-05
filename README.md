@@ -98,19 +98,15 @@ class BTree:
         return None
       else:
         return self.search_key(k, x.child[i])
-      
     else:
       return self.search_key(k, self.root)
 
 
 def main():
   B = BTree(3)
-
   for i in range(10):
     B.insert((i, 2 * i))
-
   B.print_tree(B.root)
-
   if B.search_key(8) is not None:
     print("\nFound")
   else:
